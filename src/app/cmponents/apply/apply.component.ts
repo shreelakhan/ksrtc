@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApplyserviceService } from '../../services/applyservice.service';
 import { Apply } from '../../classes/apply';
 import { error } from '@angular/compiler/src/util';
-
+import { ToastrService } from 'ngx-toastr';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-apply',
@@ -16,6 +17,8 @@ export class ApplyComponent implements OnInit {
 
   constructor( private applyServise: ApplyserviceService) { }
 
+  toast : ToastrService;
+  router : Router;
   ngOnInit() {
   }
 
@@ -29,6 +32,7 @@ export class ApplyComponent implements OnInit {
     this.applyServise.apply(this.apply)
       .subscribe(data => console.log(data), error => console.log(error));
     this.apply = new Apply();
+    this.toast.success('Applied Succesfully');
   }
 
   onSubmit()
@@ -37,4 +41,8 @@ export class ApplyComponent implements OnInit {
     this.save();
   }
 
+  applyCancel()
+  {
+    this.router.navigate(['/']);
+  }
 }

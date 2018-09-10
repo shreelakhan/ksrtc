@@ -1,4 +1,4 @@
-<div class="shadow-lg p-4 mb-4 bg-white col-md-4 margin">
+<div class="shadow-lg p-4 mb-4 bg-white mainApply">
   <div>
     <h3 class="header" style="margin-bottom: 20px;">
       Apply Here
@@ -12,7 +12,7 @@
     <input type="text" class="form-control" name="lName" [(ngModel)]="apply.lName" required>
 
     <label for="">Age *</label>
-    <input type="text" class="form-control" name="age" [(ngModel)]="apply.age" required>
+    <input type="number" class="form-control" name="age" [(ngModel)]="apply.age" required>
 
     <label for="">Date of Birth *</label>
     <input type="date" class="form-control" name="dob" [(ngModel)]="apply.dob" required>

@@ -1,7 +1,12 @@
 .margin{
-margin-left: 80px;
+
 }
 .btn{
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
+}
+.mainApply{
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 160px;
 }
