@@ -1,0 +1,25 @@
+<div class="tab">
+  <h4>Registerd List</h4>
+  <table class="table-responsive table">
+    <thead>
+     <tr>
+       <th>Id</th>
+       <th>Name</th>
+       <th>Contact Number</th>
+       <th>Email Id</th>
+       <th>Delete</th>
+       <th>Edit</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.uName}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.email}}</td>
+        <td><button ><mat-icon color="accent" (click)="deleteReg(user.id)">delete</mat-icon></button></td>
+        <td><button><mat-icon color="primary">edit</mat-icon></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

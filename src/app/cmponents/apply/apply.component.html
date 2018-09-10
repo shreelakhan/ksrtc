@@ -1,0 +1,56 @@
+<div class="shadow-lg p-4 mb-4 bg-white col-md-4 margin">
+  <div>
+    <h3 class="header" style="margin-bottom: 20px;">
+      Apply Here
+    </h3>
+  </div>
+  <form (ngSubmit)="onSubmit()" #frm="ngForm">
+    <label>First Name *</label>
+    <input type="text" class="form-control" name="fName" [(ngModel)]="apply.fName" required>
+
+    <label for="">Last Name *</label>
+    <input type="text" class="form-control" name="lName" [(ngModel)]="apply.lName" required>
+
+    <label for="">Age *</label>
+    <input type="text" class="form-control" name="age" [(ngModel)]="apply.age" required>
+
+    <label for="">Date of Birth *</label>
+    <input type="date" class="form-control" name="dob" [(ngModel)]="apply.dob" required>
+
+    <label for="" style="margin-right: 10px; margin-top: 20px;">Gender</label>
+    <div class="radio">
+      <label><input type="radio" name="gender" [(ngModel)]= "apply.gender" value="female">Female</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="gender" [(ngModel)]= "apply.gender" value="male">Male</label>
+    </div>
+
+    <label for="">Contact Number *</label>
+    <input type="number" class="form-control" name="mobile" [(ngModel)]="apply.mobile" required> 
+
+    <label for="">Email ID</label>
+    <input type="email" class="form-control" name="email" [(ngModel)]="apply.email">
+
+    <label for="">Place From *</label>
+    <input type="text" class="form-control" name="from" [(ngModel)]="apply.placeFrom" required>
+
+    <label for="">Place To *</label>
+    <input type="text" class="form-control" name="to" [(ngModel)]="apply.placeTo" required>
+
+    <label for="">Place Change Over</label>
+    <input type="text" class="form-control" name="placeChangeOver" [(ngModel)]="apply.placeChangeOver">
+
+    <label for="">Validity From</label>
+    <input type="date" class="form-control" name="validFrom" [(ngModel)]="apply.validFrom">
+
+    <label for="">ValidTo</label>
+    <input type="date" class="form-control" name="validTo" [(ngModel)]="apply.validTo">
+
+    <label for="">Address</label>
+    <textarea class="form-control" name="address" [(ngModel)]="apply.address"  rows="4"></textarea>
+
+   <button class="btn btn-success"[disabled]="frm.invalid">Apply</button>
+   <button class="btn btn-danger" onclick="applyCancel()">Cancel</button>
+
+  </form>
+</div>

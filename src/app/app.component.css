@@ -1,0 +1,14 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+li,a{
+    color: white;
+    padding: 10px;
+    list-style-type: none;
+    float: right;
+    font-size: 15px;
+    margin-top: 20px;
+}
+li,a:hover{
+    color: aquamarine;
+}

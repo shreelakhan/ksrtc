@@ -1,0 +1,25 @@
+  <mat-card class="example-form">
+   <h4>Contact here</h4>
+  <form [formGroup] = "contactForm">
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput placeholder="Your name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input type="number" matInput placeholder="Your phone number" 
+      formControlName="mobile"
+      >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input type="email" matInput placeholder="Your Email Id" formControlName="emailId">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Leave a comment" formControlName="msg"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="submitForm()"  [disabled]="contactForm.invalid">Contact</button>
+    <button mat-raised-button color="accent" (click)="cancelContact()" >Cancel</button>
+  </form>
+</mat-card>

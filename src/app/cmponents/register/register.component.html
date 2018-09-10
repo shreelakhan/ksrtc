@@ -1,0 +1,32 @@
+
+<mat-card class="example-form">
+  <h4>Register here</h4>
+ <form [formGroup] = "regForm">
+   <mat-form-field class="example-full-width">
+     <input type="text" matInput placeholder="User name" formControlName="uName">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+     <input type="number" matInput placeholder="Your phone number" 
+     formControlName="mobile"
+     >
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+     <input type="email" matInput placeholder="Your Email Id" formControlName="email">
+   </mat-form-field>
+ 
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="pass">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="repass">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+
+   <button mat-raised-button color="primary" (click)="submit()"  [disabled]="regForm.invalid">Contact</button>
+   <button mat-raised-button color="accent" (click)="cancel()" >Cancel</button>
+ </form>
+</mat-card>
